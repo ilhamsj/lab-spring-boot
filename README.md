@@ -32,7 +32,7 @@ A modern server-side Java template engine for both web and standalone environmen
 ## INSTALLATION
 
 ### SPRING BOOT
-`mvn clean package -DskipTest`
+`mvn clean package -DskipTest`  
 `mvn clean spring-boot:run`
 
 ### DATABASE (POSTGRES)
