@@ -32,8 +32,7 @@ A modern server-side Java template engine for both web and standalone environmen
 ## INSTALLATION
 
 ### SPRING BOOT
-`mvn clean package -DskipTest`  
-`mvn clean spring-boot:run`
+`mvn clean package -DskipTest`
 
 ### DATABASE (POSTGRES)
 
@@ -52,3 +51,6 @@ A modern server-side Java template engine for both web and standalone environmen
 
 - Access via terminal
 `psql -h 127.0.0.1 -U universe sandbox_spring_boot`
+
+### MIGRATION
+`mvn clean spring-boot:run` 
