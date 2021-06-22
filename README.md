@@ -36,7 +36,7 @@ A modern server-side Java template engine for both web and standalone environmen
 
 ### DATABASE (POSTGRES)
 
-- Install PSQL
+- Running postgresql
 ```
     sudo docker run --rm \
         --name sandbox_spring_boot \
