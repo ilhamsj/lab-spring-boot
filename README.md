@@ -53,4 +53,5 @@ A modern server-side Java template engine for both web and standalone environmen
 `psql -h 127.0.0.1 -U universe sandbox_spring_boot`
 
 ### MIGRATION
-`mvn clean spring-boot:run` 
+`mvn clean spring-boot:run`  
+`mvnw spring-boot:run`
