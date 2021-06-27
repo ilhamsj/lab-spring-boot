@@ -9,7 +9,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "users")
 
-public class UserModel {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 
@@ -18,10 +18,10 @@ public class UserModel {
     private String email;
     private String password;
 
-    UserModel() {
+    User() {
     }
 
-    UserModel(String name, String email, String password) {
+    User(String name, String email, String password) {
         this.name = name;
         this.email = email;
         this.password = password;
