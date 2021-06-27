@@ -42,7 +42,7 @@ A modern server-side Java template engine for both web and standalone environmen
         --name sandbox_spring_boot \
         -e POSTGRES_DB=sandbox_spring_boot \
         -e POSTGRES_USER=universe \
-        -e POSTGRES_PASSWORD=hrb1FI79JF8Pxm9Vg3PR \
+        -e POSTGRES_PASSWORD=        \
         -e PGDATA=/var/lib/postgresql/data:z/pgdata \
         -v "$PWD/database:/var/lib/postgresql/data:z" \
         -p 5432:5432 \
@@ -54,4 +54,4 @@ A modern server-side Java template engine for both web and standalone environmen
 
 ### MIGRATION
 `mvn clean spring-boot:run`  
-`mvnw spring-boot:run`
+`mvn spring-boot:run`
