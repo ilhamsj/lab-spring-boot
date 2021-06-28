@@ -1,21 +1,15 @@
 package com.exceptions;
 
-import java.util.Date;
-
 public class ErrorDetails {
-    private Date timestamp;
     private String message;
     private String details;
+    private Boolean success;
 
-    public ErrorDetails(Date timestamp, String message, String details) {
+    public ErrorDetails(String message, String details, Boolean success) {
         super();
-        this.timestamp = timestamp;
         this.message = message;
+        this.success = success;
         this.details = details;
-    }
-
-    public Date getTimestamp() {
-        return timestamp;
     }
 
     public String getMessage() {
@@ -24,5 +18,9 @@ public class ErrorDetails {
 
     public String getDetails() {
         return details;
+    }
+
+    public Boolean getSuccess() {
+        return success;
     }
 }
