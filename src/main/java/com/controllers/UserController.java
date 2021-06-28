@@ -21,13 +21,12 @@ public class UserController {
     private UserRepository repository;
 
     @GetMapping("/users")
-    public List<User> getAllUserModels() {
+    public List<User> index() {
         return repository.findAll();
     }
 
     @GetMapping("/users/{id}")
-    public ResponseEntity<User> getEmployeeById(@PathVariable(value = "id") Integer userId)
-            throws ResourceNotFoundException {
+    public ResponseEntity<User> find(@PathVariable(value = "id") Integer userId) throws ResourceNotFoundException {
         User user = repository.findById(userId)
                 .orElseThrow(() -> new ResourceNotFoundException("Employee not found for this id :: " + userId));
         return ResponseEntity.ok().body(user);
