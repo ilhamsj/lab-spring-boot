@@ -3,6 +3,7 @@ package com.controllers;
 import java.util.List;
 
 import com.exceptions.ResourceNotFoundException;
+import com.helper.JsonResponse;
 import com.models.User;
 import com.repositories.UserRepository;
 
@@ -40,4 +41,10 @@ public class UserController {
         return repository.save(employee);
     }
 
+    @GetMapping("/products")
+    public JsonResponse getAll() {
+        List<User> data = repository.findAll();
+        JsonResponse response = new JsonResponse(true, "Data successfully retrieved", data);
+        return response;
+    }
 }
