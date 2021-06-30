@@ -1,13 +1,18 @@
 package com.helper;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class JsonResponse {
     private Boolean success;
     private String message;
     private List<Object> data;
-    private Integer version = 1;
     private Integer code = 200;
+    private Integer version = 1;
+
+    public JsonResponse() {
+
+    }
 
     public JsonResponse(Boolean success, String message, List<Object> data, Integer version, Integer code) {
         super();
@@ -18,23 +23,50 @@ public class JsonResponse {
         this.code = code;
     }
 
+    public Boolean isSuccess() {
+        return this.success;
+    }
+
     public Boolean getSuccess() {
-        return success;
+        return this.success;
+    }
+
+    public void setSuccess(Boolean success) {
+        this.success = success;
     }
 
     public String getMessage() {
-        return message;
+        return this.message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
     }
 
     public List<Object> getData() {
-        return data;
+        if (this.data == null) {
+            this.data = new ArrayList<>();
+        }
+        return this.data;
+    }
+
+    public void setData(List<Object> data) {
+        this.data = data;
     }
 
     public Integer getVersion() {
-        return version;
+        return this.version;
+    }
+
+    public void setVersion(Integer version) {
+        this.version = version;
     }
 
     public Integer getCode() {
-        return code;
+        return this.code;
+    }
+
+    public void setCode(Integer code) {
+        this.code = code;
     }
 }

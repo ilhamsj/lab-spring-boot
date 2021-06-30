@@ -2,8 +2,8 @@ package com.services;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
+import com.exceptions.ResourceNotFoundException;
 import com.helper.JsonResponse;
 import com.models.User;
 import com.repositories.UserRepository;
@@ -27,12 +27,20 @@ public class UserService {
         return new JsonResponse(true, "Data successfully retrieved", users, 1, 200);
     }
 
-    public JsonResponse find(Integer userId) {
-        Optional<User> users = repository.findById(userId);
-        User user = Optional.ofNullable(users.get()).orElse(new User());
-        List<Object> listData = new ArrayList<>();
-        listData.add(user);
+    public JsonResponse find(Integer userId) throws ResourceNotFoundException {
 
-        return new JsonResponse(true, "Data successfully retrieved", listData, 1, 200);
+        JsonResponse jsonResponse = new JsonResponse();
+
+        try {
+            User user = repository.findById(userId).get();
+            jsonResponse.setSuccess(true);
+            jsonResponse.setMessage("Data successfully retrieve");
+            jsonResponse.getData().add(user);
+            return jsonResponse;
+
+        } catch (Exception e) {
+            throw new ResourceNotFoundException(e.getLocalizedMessage(), e.getCause());
+        }
+
     }
 }

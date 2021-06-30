@@ -1,5 +1,6 @@
 package com.controllers;
 
+import com.exceptions.ResourceNotFoundException;
 import com.helper.JsonResponse;
 import com.services.UserService;
 
@@ -22,7 +23,7 @@ public class UserController {
     }
 
     @GetMapping("/users/{id}")
-    public JsonResponse find(@PathVariable(value = "id") Integer userId) {
+    public JsonResponse find(@PathVariable(value = "id") Integer userId) throws ResourceNotFoundException {
         return repository.find(userId);
     }
 

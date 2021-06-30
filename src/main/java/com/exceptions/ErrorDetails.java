@@ -3,13 +3,15 @@ package com.exceptions;
 public class ErrorDetails {
     private String message;
     private String details;
-    private Boolean success;
+    private boolean success;
+    private int code;
 
-    public ErrorDetails(String message, String details, Boolean success) {
+    public ErrorDetails(String message, String details, Boolean success, int code) {
         super();
         this.message = message;
         this.success = success;
         this.details = details;
+        this.code = code;
     }
 
     public String getMessage() {
@@ -22,5 +24,9 @@ public class ErrorDetails {
 
     public Boolean getSuccess() {
         return success;
+    }
+
+    public int getCode() {
+        return code;
     }
 }
