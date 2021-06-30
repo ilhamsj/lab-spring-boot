@@ -2,14 +2,12 @@ package com.helper;
 
 import java.util.List;
 
-import com.models.User;
-
 public class JsonResponse {
     private Boolean success;
     private String message;
-    private List<User> data;
+    private List<Object> data;
 
-    public JsonResponse(Boolean success, String message, List<User> data) {
+    public JsonResponse(Boolean success, String message, List<Object> data) {
         super();
         this.success = success;
         this.message = message;
@@ -24,7 +22,7 @@ public class JsonResponse {
         return message;
     }
 
-    public List<User> getData() {
+    public List<Object> getData() {
         return data;
     }
 }

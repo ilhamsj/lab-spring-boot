@@ -55,3 +55,6 @@ A modern server-side Java template engine for both web and standalone environmen
 ### MIGRATION
 `mvn clean spring-boot:run`  
 `mvn spring-boot:run`
+
+## CATATAN
+- save JPA Repository
