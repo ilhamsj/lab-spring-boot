@@ -24,7 +24,7 @@ public class UserService {
         List<Object> users = new ArrayList<>();
         users.addAll(repository.findAll());
 
-        return new JsonResponse(true, "Data successfully retrieved", users);
+        return new JsonResponse(true, "Data successfully retrieved", users, 1, 200);
     }
 
     public JsonResponse find(Integer userId) {
@@ -33,6 +33,6 @@ public class UserService {
         List<Object> listData = new ArrayList<>();
         listData.add(user);
 
-        return new JsonResponse(true, "Data successfully retrieved", listData);
+        return new JsonResponse(true, "Data successfully retrieved", listData, 1, 200);
     }
 }
